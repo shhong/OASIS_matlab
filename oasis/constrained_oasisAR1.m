@@ -180,7 +180,7 @@ s = spks;
     end
 
     function update_lam_b() % estimate lambda  & b
-        db = mean(y-solution) - b;
+        db = mean(y-solution(:)) - b;
         b = b + db;
         dlam = -db/(1-g);
         
